@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Loops In Python</h1>
+    <hr>
+
+    <h2>Python For Loop</h2>
+        <p>For loops are traditionally used when you have a block of code which you want to repeat a fixed number of times. The Python for statement iterates over the members of a sequence in order, executing the block each time.<br />
+        Here's an example:<br />
+        for x in range(0, 3):<br />
+        print("We're on time %d" % (x))</p>
+    <hr>
+    <h2>Python While Loop</h2>
+        <p>Contrast the 'for' statement with the 'while' loop, used when a condition needs to be checked in each iteration, or to repeat a block of code forever.<br />
+        Here's an example:<br />
+            x = 1<br />
+            while True: <br /> 
+            print("To infinity and beyond! We're getting close, on %d now!" % (x))<br />
+            x += 1</p>
+    <hr>
+    <h2>Range</h2>
+        <p>The 'range' function is seen so often in for statements that you might think range is part of the for syntax. It is not: it is a Python built-in function which returns a sequence following a specific pattern (most often sequential integers), which thus meets the requirement of providing a sequence for the for statement to iterate over. Since for can operate directly on sequences, and there is often no need to count. This is a common beginner construct (if they are coming from another language with different loop syntax).</p>
+    <hr>
+    
+
+
+{% endblock %}

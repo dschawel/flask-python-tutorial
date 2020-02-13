@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Python Operators</h1>
+    <h2>List of Python Operators</h2>
+    {% for operator in operators %}
+        <p>
+            <strong>{{ operator.name }}</strong>: 
+            {{ operator.description }}
+            It's symbol is {{ operator.symbol }}. 
+            An example is {{ operator.example }}.
+        </p>
+    {% endfor %}
+    <hr>
+    <form action='/operators' method='POST'>
+        <h3>Submit an Operator!</h3>
+        <div>
+            <label>Name</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Symbol</label>
+            <input type="text" name="symbol">
+        </div>
+        <div>
+            <label>Example</label>
+            <input type="text" name="example">
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" size="191" name="description">
+        </div>
+        <div>
+            <label>Uses</label>
+            <input type="text" size="200" name="uses">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
